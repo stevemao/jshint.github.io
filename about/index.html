@@ -1,0 +1,141 @@
+<!doctype html>
+
+<html lang=en>
+  <head>
+    <title>About JSHint</title>
+
+    <meta charset=utf8>
+    <meta name=description content="JSHint, a JavaScript Code Quality Tool">
+    <meta name=author      content="Anton Kovalyov">
+
+    
+
+    
+    <link rel=stylesheet href="/res/docs.min.css">
+    
+
+    <script>
+      if (window.self !== window.top)
+        window.top.location.href = document.location.href;
+
+      function jumpToOption() {
+        var input = document.getElementById("jump-to-option")
+
+        if (/^\s*$/.test(input.value))
+          return false
+
+        _gaq.push(["_trackEvent", "Docs", "jumpToOption", input.value]);
+
+        if (window.location.pathname === "/docs/options/")
+          window.location.hash = "#" + input.value
+        else
+          window.location = "/docs/options/#" + input.value
+
+        return false
+      }
+
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-126146-15"]);
+      _gaq.push(["_setDomainName", "jshint.com"]);
+      _gaq.push(["_trackPageview"]);
+    </script>
+  </head>
+
+  <body>
+    <nav class="header navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/">JSHint</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+              <li><a href="/about/">About</a></li>
+              <li><a href="/docs/">Docs</a></li>
+              <li><a href="/install/">Install</a></li>
+              <li><a href="/contribute/">Contribute</a></li>
+              <li><a href="/blog/">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <form class="navbar-form navbar-left" role="search" onsubmit="return jumpToOption()">
+              <div class="form-group">
+                <input id="jump-to-option" type="text" class="form-control" placeholder="Option name">
+              </div>
+              <button type="submit" class="btn btn-default">Jump to docs</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container content">
+      <div class="row">
+        <div class="col-md-8">
+          <h1>About</h1>
+
+<p><strong>JSHint</strong> is a community-driven tool to detect errors and potential problems in
+JavaScript code and to enforce your team&#39;s coding conventions. It is very
+flexible so you can easily adjust it to your particular coding guidelines and
+the environment you expect your code to execute in. JSHint is open source and
+will always stay this way.</p>
+
+<h3>Our goal</h3>
+
+<p>The goal of this project is to help JavaScript developers write complex programs
+without worrying about typos and language gotchas.</p>
+
+<p>Any code base eventually becomes huge at some point, and simple mistakes—that
+would not show themselves when written—can become show stoppers and waste
+hours of debugging. And this is when static code analysis tools come into play
+and help developers to spot such problems. JSHint scans a program written in
+JavaScript and reports about commonly made mistakes and potential bugs. The
+potential problem could be a syntax error, a bug due to implicit type
+conversion, a leaking variable or something else.</p>
+
+<p>Only 15% of all programs linted on this website pass the JSHint checks. In all
+other cases, JSHint finds some red flags that could&#39;ve been bugs or potential
+problems.</p>
+
+<p>Please note, that while static code analysis tools can spot many different kind
+of mistakes, it can&#39;t detect if your program is correct, fast or has memory
+leaks. You should always combine tools like JSHint with unit and functional
+tests as well as with code reviews.</p>
+
+<h3>Who uses JSHint?</h3>
+
+<p>Engineers from these companies and projects use JSHint:</p>
+
+<ul><li><a href="https://www.mozilla.org/">Mozilla</a></li><li><a href="https://wikipedia.org/">Wikipedia</a></li><li><a href="https://facebook.com/">Facebook</a></li><li><a href="https://twitter.com/">Twitter</a></li><li><a href="http://getbootstrap.com/">Bootstrap</a></li><li><a href="https://disqus.com/">Disqus</a></li><li><a href="https://medium.com/">Medium</a></li><li><a href="https://yahoo.com/">Yahoo!</a></li><li><a href="http://smugmug.com/">SmugMug</a></li><li><a href="http://jquery.com/">jQuery</a></li><li><a href="http://mozilla.github.io/pdf.js">PDF.js</a></li><li><a href="http://coursera.com/">Coursera</a></li><li><a href="http://brackets.io/">Adobe Brackets</a></li><li><a href="http://cordova.io/">Apache Cordova</a></li><li><a href="http://redhat.com/">RedHat</a></li><li><a href="http://soundcloud.com/">SoundCloud</a></li><li><a href="http://nodejitsu.com/">Nodejitsu</a></li><li><a href="https://yelp.com/">Yelp</a></li><li><a href="http://voxer.com/">Voxer</a></li><li><a href="http://enyojs.com/">EnyoJS</a></li><li><a href="http://quickenloans.com/">QuickenLoans</a></li><li><a href="http://www.odesk.com/">oDesk</a></li><li><a href="http://c9.io/">Cloud9</a></li><li><a href="https://codeclimate.com/">CodeClimate</a></li><li><a href="http://pandootek.com/">Pandoo TEK</a></li><li><a href="http://zendesk.com/">Zendesk</a></li><li><a href="http://couchdb.apache.org/">Apache CouchDB</a></li></ul>
+
+<p>And many more!</p>
+
+<h3>Who&#39;s behind JSHINT?</h3>
+
+<p>JSHint was created and is maintained by <a href="http://anton.kovalyov.net/">Anton Kovalyov</a>, a computer
+programmer from San Francisco. Contact email: <a href="mailto:anton@kovalyov.net">anton@kovalyov.net</a>.</p>
+        </div>
+
+        <div class="col-md-4">
+          
+          <img class="sideimage" src="/res/power.jpg">
+          
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src = "//www.google-analytics.com/ga.js";
+
+        var st = document.getElementsByTagName("script")[0];
+        st.parentNode.insertBefore(ga, st);
+      })();
+    </script>
+  </body>
+</html>
